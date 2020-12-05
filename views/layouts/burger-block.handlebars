@@ -1,0 +1,11 @@
+{{!-- Button to eat burger --}}
+<li>
+    {{!-- burger name  --}}
+	{{burger_name}}
+
+	<button class="change-Devoured btn btn-secondary btn-sm" data-id="{{id}}" data-newDevour="{{Devoured}}">
+		{{#if Devoured}}DEVOUR BURGER!!{{else}}NO FOOD!{{/if}}
+	</button>
+
+
+</li>
