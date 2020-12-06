@@ -6,4 +6,30 @@
     </iframe>
         <h1 class="text-center">EAT-DA-BURGER!</h1>
 </div>
-      
+   {{!-- Burgers to be devoured --}}
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <h2>Burgers to be Devoured!</h2>
+      <ul>
+        {{#each burger}}
+        {{#unless devoured}}
+        {{> burgers/burger-block Devoured=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    {{!-- burgers which have been devoured --}}
+    <div class="col-md">
+      <h2>No Food!</h2>
+      <ul>
+        {{#each burger}}
+        {{#if devoured}}
+        {{> burgers/burger-block Devoured=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+   
